@@ -17,6 +17,7 @@ namespace Dibs.Models
 
         [Required]
         [DisplayName("Meeting Day")]
+        [DataType(DataType.Date)]
         public DateTime MeetDate { get; set; }
 
         [Required]
