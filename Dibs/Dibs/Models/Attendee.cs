@@ -24,7 +24,7 @@ namespace Dibs.Models
         public bool IsAttending { get; set; }
 
         [StringLength(90)]
-        public string? Message { get; set; }
+        public string Message { get; set; }
 
 
 

@@ -4,4 +4,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Meetings\" />
+    <Folder Include="Pages\MeetingUsers\" />
+    <Folder Include="Pages\Attendees\" />
+    <Folder Include="Pages\Rooms\" />
+  </ItemGroup>
+
 </Project>
