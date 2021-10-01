@@ -3,49 +3,47 @@
 @{
     ViewData["Title"] = "Administrationn";
 }
+<div class="row">
+    <h1>System Administration</h1>
+    <h2>Manually enter data into the sytem using the links below.</h2>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Users</h5>
+                <p class="card-text">Click the link below to view, create, edit, and delete users from the system.</p>
+                <a class="btn btn-primary" asp-area="" asp-page="/MeetingUsers/Index">Go</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Rooms</h5>
+                <p class="card-text">Click the link below to view, create, edit, and delete rooms from the system.</p>
+                <a class="btn btn-primary" asp-area="" asp-page="/Rooms/Index">Go</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Meetings</h5>
+                <p class="card-text">Click the link below to view, create, edit, and delete meetings from the system.</p>
+                <a class="btn btn-primary" asp-area="" asp-page="/Meetings/Index">Go</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Meeting Invitions</h5>
+                <p class="card-text">Click the link below to view, create, edit, and delete meeting invitations from the system.</p>
+                <a class="btn btn-primary" asp-area="" asp-page="/Attendees/Index">Go</a>
 
-<div class="container">
-    <div class="row">
-        <h1>System Administration</h1>
-        <h2>Manually enter data into the sytem using the links below.</h2>
-    </div>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Users</h5>
-                    <p class="card-text">Click the link below to view, create, edit, and delete users from the system.</p>
-                    <a href="#" class="btn btn-primary">Go</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Rooms</h5>
-                    <p class="card-text">Click the link below to view, create, edit, and delete rooms from the system.</p>
-                    <a href="#" class="btn btn-primary">Go</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Meetings</h5>
-                    <p class="card-text">Click the link below to view, create, edit, and delete meetings from the system.</p>
-                    <a href="#" class="btn btn-primary">Go</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Meeting Invitions</h5>
-                    <p class="card-text">Click the link below to view, create, edit, and delete meeting invitations from the system.</p>
-                    <a href="#" class="btn btn-primary">Go</a>
-                </div>
             </div>
         </div>
     </div>

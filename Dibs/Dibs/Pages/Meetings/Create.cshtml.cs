@@ -21,7 +21,7 @@ namespace Dibs.Pages.Meetings
 
         public IActionResult OnGet()
         {
-        ViewData["MeetingUserId"] = new SelectList(_context.Set<MeetingUser>(), "Id", "Email");
+        ViewData["MeetingUserId"] = new SelectList(_context.MeetingUser, "Id", "Email");
             return Page();
         }
 

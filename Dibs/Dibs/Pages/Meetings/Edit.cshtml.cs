@@ -37,7 +37,7 @@ namespace Dibs.Pages.Meetings
             {
                 return NotFound();
             }
-           ViewData["MeetingUserId"] = new SelectList(_context.Set<MeetingUser>(), "Id", "Email");
+           ViewData["MeetingUserId"] = new SelectList(_context.MeetingUser, "Id", "Email");
             return Page();
         }
 

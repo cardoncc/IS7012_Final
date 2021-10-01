@@ -34,6 +34,9 @@ namespace Dibs.Models
         //MeetingUser to Attendee
         public List<Attendee> Attendees { get; set; }
 
+        //MeetingUser to Meeting
+        public List<Meeting> Meetings { get; set; }
+
         [DisplayName("Full Name")]
         public string FullName
         {
