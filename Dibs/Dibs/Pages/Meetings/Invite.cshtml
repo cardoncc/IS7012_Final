@@ -1,0 +1,66 @@
+﻿@page
+@model Dibs.Pages.Meetings.InviteModel
+
+@{
+    ViewData["Title"] = "Invite";
+    int Invites = Model.NewMeeting.NumOfInvites;
+}
+
+<h1>Invite</h1>
+
+<h4>Attendee</h4>
+<hr />
+<h5>@Invites</h5>
+@*<table>
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Invite
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var mu in Model.UserList)
+        {
+            <tr>
+                <td>
+                    @mu.FullName
+                </td>
+                <td>
+                    <input type="checkbox" value=“@mu.Id” name=“Form.UserIds”>
+                </td>
+            </tr>
+        }
+    </tbody>
+<</table>*@
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group">
+                @for (int i = 0; i < Model.NewMeeting.NumOfInvites;i++)
+                {
+                    <select name=“Form.UserIds”>
+                        <option value=“”>Select...</option>
+                        @foreach (var mu in Model.UserList)
+                        {
+                            <option value=“@mu.Id”>@mu.FullName </option>
+                        }
+                    </select>
+                }
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
