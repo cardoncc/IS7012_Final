@@ -51,8 +51,9 @@ namespace Dibs.Pages.Meetings
 
             NewMeeting = _context.Meeting.Find(id);
             
-            foreach(int uid in Form.UserIds)
+            foreach(int? uid in Form.UserIds)
             {
+                if (uid == null) { continue; }//skip blank entries
                 //Create an attendee reccord
                 var ma = new Attendee { Meeting = NewMeeting, MeetingUserId = uid };
                 _context.Attendee.Add(ma);
