@@ -39,8 +39,8 @@ namespace Dibs.Pages.Meetings
 
             _context.Meeting.Add(Meeting);
             await _context.SaveChangesAsync();
-
-            return RedirectToPage("./Index");
+            
+            return RedirectToPage("./Invite", new {id = Meeting.Id });
         }
     }
 }
